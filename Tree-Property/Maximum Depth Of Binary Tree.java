@@ -12,8 +12,8 @@ public class Solution {
     public int maxDepth_recursive(TreeNode root) {
         if (root == null)
             return 0;
-        int left = depthHelper(root.left);
-        int right = depthHelper(root.right);
+        int left = maxDepth_recursive(root.left);
+        int right = maxDepth_recursive(root.right);
         return Math.max(left, right) + 1;
     }
     
